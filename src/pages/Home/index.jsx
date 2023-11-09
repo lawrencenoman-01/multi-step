@@ -53,7 +53,7 @@ const Home = () => {
       case 'Plan':
         return <MonthlyPlan goToNext={() => setActive('AddOns')} goBack={() => setActive('PersonalInfo')} />;
       case 'AddOns':
-        return <AddOns goToNext={() => setActive('Summary')} goBack={() => setActive('Plan')} />;
+        return <AddOns goToNext={() => setActive('PersonalInfo')} goBack={() => setActive('Plan')} />;
       default:
         return <PersonalInfo goToNext={() => setActive('Plan')} />;
     }

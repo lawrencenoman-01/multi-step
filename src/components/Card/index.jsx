@@ -20,11 +20,43 @@ const CardY = ({goToNext, goToBack}) => {
   const [selectPlan, setSelectPlan] = useState({})
 
   const dispath = useDispatch()
-  // const handlePlanCard = (planCard) => {
-  //   switch (planCard) {
-  //     case ''
-  //   }
-  // }
+  const handlePlanCard = (planCard) => {
+    const isYearlyPrice = isYearly;
+    let yearly = '';
+    
+    if (isYearlyPrice) {
+      yearly = 'Yearly'
+    } else {
+      yearly = 'Monthly'
+    }
+
+    let priceCategory = '';
+
+    switch (planCard) {
+      case 'Arcade':
+        priceCategory = isYearlyPrice ? '$90/yr' : '$9/mo';
+      break;
+
+      case 'Advanced':
+        priceCategory = isYearlyPrice ? '$120/yr' : '$12/mo';
+      break;
+
+      case 'Pro':
+        priceCategory = isYearlyPrice ? '$150/yr' : '$15/mo';
+      break;
+
+      default:
+      break;
+    }
+
+    const selectedPlan = {
+      name: planCard,
+      price: priceCategory,
+      time: yearly,
+    }
+
+    setSelectPlan(selectedPlan)
+  }
   
   const handlePlanNext = (e) => {
     e.preventDefault()
@@ -35,7 +67,7 @@ const CardY = ({goToNext, goToBack}) => {
   return (
     <div className={styles.home}>
       <div className={styles.home__container}>
-        <div className={cardPicker === 'arcade' ? `${styles.home__container__card} ${styles.home__container__card_active}` : styles.home__container__card} onClick={() => setCardPicker('arcade')}>
+        <div className={cardPicker === 'arcade' ? `${styles.home__container__card} ${styles.home__container__card_active}` : styles.home__container__card} onClick={() => {setCardPicker('arcade'); handlePlanCard('Arcade');}}>
           <div className={styles.home__container__card__content}>
             <img src="/icon-arcade.svg" alt="icon plan" />
             <div className={styles.home__container__card__content__title}>
@@ -49,7 +81,7 @@ const CardY = ({goToNext, goToBack}) => {
             </div> : ""}
           </div>
         </div>
-        <div className={cardPicker === 'advanced' ? `${styles.home__container__card} ${styles.home__container__card_active}` : styles.home__container__card} onClick={() => setCardPicker('advanced')} >
+        <div className={cardPicker === 'advanced' ? `${styles.home__container__card} ${styles.home__container__card_active}` : styles.home__container__card} onClick={() => {setCardPicker('advanced'); handlePlanCard('Advanced');}} >
           <div className={styles.home__container__card__content}>
             <img src="/icon-advanced.svg" alt="icon plan" />
             <div className={styles.home__container__card__content__title}>
@@ -63,7 +95,7 @@ const CardY = ({goToNext, goToBack}) => {
             </div> : ""}
           </div>
         </div>
-        <div className={cardPicker === 'pro' ? `${styles.home__container__card} ${styles.home__container__card_active}` : styles.home__container__card} onClick={() => setCardPicker('pro')}>
+        <div className={cardPicker === 'pro' ? `${styles.home__container__card} ${styles.home__container__card_active}` : styles.home__container__card} onClick={() => {setCardPicker('pro'); handlePlanCard('Pro');}}>
           <div className={styles.home__container__card__content}>
             <img src="/icon-pro.svg" alt="icon plan" />
             <div className={styles.home__container__card__content__title}>

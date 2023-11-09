@@ -48,7 +48,7 @@ const PersonalInfo = ({ goToNext }) => {
       isValid = false;
     }
 
-    if (!/^\+?[0-9]*$/.test(formData.phone)) {
+    if (!/^\+?[0-9]+$/.test(formData.phone)) {
       newErrors.phone = 'Invalid phone number';
       isValid = false;
     }

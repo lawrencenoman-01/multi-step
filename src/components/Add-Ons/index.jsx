@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
@@ -10,10 +11,11 @@ import { FormattedMessage } from 'react-intl';
 import { CheckBox } from '@mui/icons-material';
 
 import ButtonNext from '@components/ButtonNext';
+import ButtonBack from '@components/ButtonBack';
 
 import styles from './add.module.scss';
 
-const AddOns = () => {
+const AddOns = ({ goToNext, goBack }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {
@@ -109,6 +111,10 @@ const AddOns = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.colButton}>
+        <ButtonBack goBack={goBack} />
+        <ButtonNext goToNext={goToNext} />
       </div>
     </div>
   );
