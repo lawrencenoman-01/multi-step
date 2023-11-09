@@ -1,0 +1,19 @@
+@import '@styles/base';
+
+.button {
+  @include directionX;
+  justify-content: end;
+
+  &__style {
+    background-color: $marine-blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+}

@@ -1,1 +1,43 @@
 @import '@styles/base';
+
+.container {
+    @include directionX;
+    align-items: center;
+    justify-content: center;
+    // background-color: $light-blue;
+    min-height: 100vh;
+
+    &__card {
+        @include directionX;
+        background: $white;
+        gap: 2px;
+        width: 900px;
+        height: 500px;
+        border-radius: 8px;
+        padding: 10px;
+
+        &__info {
+            @include directionY;
+            width: 70%;
+
+            &__detail {
+                background-color: blue;
+            }
+
+            .navigation {
+                @include directionX;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: -30px;
+                .back {
+                    padding-top: 10px;
+                }
+
+                .next {
+                    padding-right: 50px;
+                }
+            }
+        }
+    }
+}

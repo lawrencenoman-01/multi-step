@@ -1,4 +1,52 @@
 export default {
+  app_step1: 'Step 1',
+  app_step2: 'Step 2',
+  app_step3: 'Step 3',
+  app_step4: 'Step 4',
+
+  app_step1_title: 'Your Info',
+  app_step2_title: 'Select Plan',
+  app_step3_title: 'Add-Ons',
+  app_step4_title: 'Summary',
+
+  app_step1_main_title: 'Personal info',
+  app_step1_description: 'Please provide your name, email address, and phone number',
+  app_step1_form_name: 'Name',
+  app_step1_form_email: 'Email Address',
+  app_step1_form_phone: 'Phone Number',
+
+  app_step2_main_title: 'Select your plan',
+  app_step2_description: 'You have the option of monthly or yearly billing',
+  app_step2_plan_title1: 'Arcade',
+  app_step2_plan_price_month: '$9/mo',
+  app_step2_plan_price_year: '$90/yr',
+  app_step2_plan_title2: 'Advanced',
+  app_step2_plan_price2_month: '$12/mo',
+  app_step2_plan_price2_year: '$120/yr',
+  app_step2_plan_title3: 'Pro',
+  app_step2_plan_price3_month: '$15/mo',
+  app_step2_plan_price3_year: '$150/yr',
+  app_step2_plan_price_free: '2 months free',
+
+  app_step2_plan_slider1: 'Monthly',
+  app_step2_plan_slider2: 'Yearly',
+
+  // Step 3
+  app_step3_main_title: 'Pick add-ons',
+  app_step3_description: 'Add-ons help enhance your gaming experience',
+  app_step3_add_title: 'Online Service',
+  app_step3_add_description: 'Access to multiplayer games',
+  app_step3_add_price: '+$1/mo',
+  app_step3_add_title2: 'Larger Storage',
+  app_step3_add_description2: 'Extra 1 TB of cloud save',
+  app_step3_add_price2: '+$2/mo',
+  app_step3_add_title3: 'Customizable Profile',
+  app_step3_add_description3: 'Custom theme on your profile',
+  app_step3_add_price3: '+$2/mo',
+
+  app_title_button: 'Next Step',
+  app_title_button2: 'Back Step',
+
   app_greeting: 'Hi from Web!',
   app_title_header: 'Bootcamp',
   app_not_found: 'Page not found',

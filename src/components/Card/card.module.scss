@@ -1,0 +1,124 @@
+@import '@styles/base';
+
+.home {
+  @include directionY;
+
+  &__container {
+    @include directionX;
+    flex-wrap: wrap;
+    gap: 18px;
+    cursor: pointer;
+
+    &__card {
+      border: 1px solid $light-gray;
+      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      width: 30%;
+      border-radius: 5px;
+
+      &__content {
+        padding: 15px;
+
+        img {
+          padding-bottom: 30px;
+        }
+
+        &__title {
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        &__price {
+          color: $cool-gray;
+          font-size: 12px;
+          font-weight: 300;
+        }
+
+        &__free {
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__card_active {
+      border: 1px solid $marine-blue;
+      background-color: $color-light-blue;
+    }
+
+    &__card:hover {
+      border: 1px solid $marine-blue;
+    }
+  }
+
+  &__slider {
+    @include directionX;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    // background-color: $magnolia;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 600;
+
+    .titleMontly,
+    .titleYearly {
+      font-size: 15px;
+      color: $cool-gray;
+    }
+    
+    .titleMontly_active,
+    .titleYearly_active {
+      color: $marine-blue;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      background-color: $marine-blue;
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          // background-color: #fff;
+          transition: transform 0.3s;
+        }
+      }
+
+      input[type="radio"]:checked+label {
+        background-color: $white;
+      }
+
+      input[type="radio"]:checked+label:before {
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+  }
+
+  .colButton {
+    @include directionX;
+    justify-content: space-between;
+  }
+}

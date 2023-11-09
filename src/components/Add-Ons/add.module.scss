@@ -1,0 +1,63 @@
+@import '@styles/base';
+
+.container {
+  margin: 30px 100px;
+  color: $marine-blue;
+
+  &__content {
+    &__title {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    &__description {
+      font-size: 15px;
+      font-weight: 300;
+      color: $cool-gray;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__card {
+    @include directionY;
+    gap: 20px;
+    margin-bottom: 80px;
+
+    &__content {
+      border: 1px solid $light-gray;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+
+      .cards {
+        @include directionX;
+        align-items: center;
+        justify-content: space-between;
+
+        &__content {
+          margin-left: -100px;
+
+          .title {
+            font-size: 15px;
+            font-weight: 600;
+          }
+
+          .description {
+            color: $cool-gray;
+            font-size: 13px;
+            font-weight: 300;
+          }
+        }
+
+        &__price {
+          font-size: 13px;
+          color: $purplish-blue;
+        }
+      }
+    }
+
+    &__content:hover {
+      border: 1px solid $marine-blue;
+    }
+  }
+}

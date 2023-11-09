@@ -1,4 +1,52 @@
 export default {
+  app_step1: 'Langkah 1',
+  app_step2: 'Langkah 2',
+  app_step3: 'Langkah 3',
+  app_step4: 'Langkah 4',
+
+  app_step1_title: 'Informasi Anda',
+  app_step2_title: 'Pilih Paket',
+  app_step3_title: 'Tambahan',
+  app_step4_title: 'Ringkasan',
+
+  app_step1_main_title: 'Informasi Pribadi',
+  app_step1_description: 'Cantumkan nama, alamat email, dan nomor telepon Anda',
+  app_step1_form_name: 'Nama',
+  app_step1_form_email: 'Alamat Email',
+  app_step1_form_phone: 'Nomor Telepon',
+
+  app_step2_main_title: 'Pilih paket Anda',
+  app_step2_description: 'Anda memiliki opsi penagihan bulanan atau tahunan',
+  app_step2_plan_title1: 'Arcade',
+  app_step2_plan_price_month: '$9/bln',
+  app_step2_plan_price_year: '$90/thn',
+  app_step2_plan_title2: 'Advanced',
+  app_step2_plan_price2_month: '$12/bln',
+  app_step2_plan_price2_year: '$120/thn',
+  app_step2_plan_title3: 'Pro',
+  app_step2_plan_price3_month: '$15/bln',
+  app_step2_plan_price3_year: '$150/thn',
+  app_step2_plan_price_free: 'gratis 2 bulan',
+
+  app_step2_plan_slider1: 'Bulanan',
+  app_step2_plan_slider2: 'Tahunan',
+
+  // Step 3
+  app_step3_main_title: 'Pilih Tambahan',
+  app_step3_description: 'Tambahan membantu anda dalam pengalaman bermain',
+  app_step3_add_title: 'Layanan Online',
+  app_step3_add_description: 'Akses ke multi permainan',
+  app_step3_add_price: '+$1/bln',
+  app_step3_add_title2: 'Penyimpanan Lebih',
+  app_step3_add_description2: 'Ekstra penyimpanan cloud sebesar 1 TB',
+  app_step3_add_price2: '+$2/bln',
+  app_step3_add_title3: 'Perubahan Profil',
+  app_step3_add_description3: 'Tema khusus di profil Anda',
+  app_step3_add_price3: '+$2/bln',
+
+  app_title_button: 'Selanjutnya',
+  app_title_button2: 'Sebelumnya',
+
   app_greeting: 'Hai dari Web!',
   app_title_header: 'Bootcamp',
   app_not_found: 'Halaman tidak ditemukan',

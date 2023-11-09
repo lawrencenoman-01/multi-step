@@ -1,0 +1,50 @@
+@import '@styles/base';
+
+.sidebar {
+  width: 30%;
+  border-radius: 5px;
+  background-image: url('/bg-sidebar-desktop.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    @include directionY;
+    align-items: start;
+    justify-content: center;
+    padding-left: 30px;
+
+    &__step1 {
+      @include directionX;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+
+      &__number {
+        @include directionX;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+
+      &__column {
+        @include directionY;
+        justify-content: space-evenly;
+
+        &__title {
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        &__description {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
